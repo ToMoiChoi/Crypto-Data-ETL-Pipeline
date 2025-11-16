@@ -160,43 +160,43 @@
 2025-Nov-13-22:18:41 : ETL pipeline completed at
 2025-Nov-13-22:18:41 : Loaded 30 rows into 'crypto_prices' table at
 2025-Nov-13-22:18:41 : Data loaded to Database as a table, Executing queries
-2025-Nov-13-23:22:43 : Preliminaries complete. Initiating ETL process
-2025-Nov-13-23:22:44 : Data extraction complete. Initiating Transformation process
-2025-Nov-13-23:22:44 : Data transformation complete. Initiating Loading process
-2025-Nov-13-23:22:44 : Data saved to CSV file
-2025-Nov-13-23:22:44 : Loaded 30 rows into 'crypto_prices' table at
-2025-Nov-13-23:22:44 : ETL pipeline completed at
-2025-Nov-13-23:22:44 : Loaded 30 rows into 'crypto_prices' table at
-2025-Nov-13-23:22:44 : Data loaded to Database as a table, Executing queries
-2025-Nov-13-23:30:55 : Preliminaries complete. Initiating ETL process
-2025-Nov-13-23:30:55 : Data extraction complete. Initiating Transformation process
-2025-Nov-13-23:30:55 : Data transformation complete. Initiating Loading process
-2025-Nov-13-23:30:55 : Data saved to CSV file
-2025-Nov-13-23:30:56 : Loaded 30 rows into 'crypto_prices' table at
-2025-Nov-13-23:30:56 : ETL pipeline completed at
-2025-Nov-13-23:30:56 : Loaded 30 rows into 'crypto_prices' table at
-2025-Nov-13-23:30:56 : Data loaded to Database as a table, Executing queries
-2025-Nov-13-23:34:04 : Preliminaries complete. Initiating ETL process
-2025-Nov-13-23:34:05 : Data extraction complete. Initiating Transformation process
-2025-Nov-13-23:34:05 : Data transformation complete. Initiating Loading process
-2025-Nov-13-23:34:05 : Data saved to CSV file
-2025-Nov-13-23:34:05 : Loaded 30 rows into 'crypto_prices' table at
-2025-Nov-13-23:34:05 : ETL pipeline completed at
-2025-Nov-13-23:34:05 : Loaded 30 rows into 'crypto_prices' table at
-2025-Nov-13-23:34:05 : Data loaded to Database as a table, Executing queries
-2025-Nov-13-23:36:47 : Preliminaries complete. Initiating ETL process
-2025-Nov-13-23:36:47 : Data extraction complete. Initiating Transformation process
-2025-Nov-13-23:36:47 : Data transformation complete. Initiating Loading process
-2025-Nov-13-23:36:47 : Data saved to CSV file
-2025-Nov-13-23:36:48 : Loaded 30 rows into 'crypto_prices' table at
-2025-Nov-13-23:36:48 : ETL pipeline completed at
-2025-Nov-13-23:36:48 : Loaded 30 rows into 'crypto_prices' table at
-2025-Nov-13-23:36:48 : Data loaded to Database as a table, Executing queries
-2025-Nov-13-23:37:23 : Preliminaries complete. Initiating ETL process
-2025-Nov-13-23:37:24 : Data extraction complete. Initiating Transformation process
-2025-Nov-13-23:37:24 : Data transformation complete. Initiating Loading process
-2025-Nov-13-23:37:24 : Data saved to CSV file
-2025-Nov-13-23:37:24 : Loaded 30 rows into 'crypto_prices' table at
-2025-Nov-13-23:37:24 : ETL pipeline completed at
-2025-Nov-13-23:37:24 : Loaded 30 rows into 'crypto_prices' table at
-2025-Nov-13-23:37:24 : Data loaded to Database as a table, Executing queries
+2025-Nov-16-22:54:07 : Preliminaries complete. Initiating ETL process
+2025-Nov-16-22:54:08 : Data extraction complete. Initiating Transformation process
+2025-Nov-16-22:54:08 : Data transformation complete. Initiating Loading process
+2025-Nov-16-22:54:08 : Data saved to CSV file
+2025-Nov-16-22:54:08 : Loaded 30 rows into 'crypto_prices' table at
+2025-Nov-16-22:54:08 : ETL pipeline completed at
+2025-Nov-16-22:54:08 : Loaded 30 rows into 'crypto_prices' table at
+2025-Nov-16-22:54:08 : Data loaded to Database as a table, Executing queries
+2025-Nov-16-23:03:15 : Preliminaries complete. Initiating ETL process
+2025-Nov-16-23:03:16 : Data extraction complete. Initiating Transformation process
+2025-Nov-16-23:03:16 : Data transformation complete. Initiating Loading process
+2025-Nov-16-23:03:16 : Data saved to CSV file
+2025-Nov-16-23:03:16 : Loaded 30 rows into 'crypto_prices' table at
+2025-Nov-16-23:03:16 : ETL pipeline completed at
+2025-Nov-16-23:03:16 : Loaded 30 rows into 'crypto_prices' table at
+2025-Nov-16-23:03:16 : Data loaded to Database as a table, Executing queries
+2025-Nov-16-23:03:26 : Preliminaries complete. Initiating ETL process
+2025-Nov-16-23:03:26 : Data extraction complete. Initiating Transformation process
+2025-Nov-16-23:03:26 : Data transformation complete. Initiating Loading process
+2025-Nov-16-23:03:26 : Data saved to CSV file
+2025-Nov-16-23:03:27 : Loaded 30 rows into 'crypto_prices' table at
+2025-Nov-16-23:03:27 : ETL pipeline completed at
+2025-Nov-16-23:03:27 : Loaded 30 rows into 'crypto_prices' table at
+2025-Nov-16-23:03:27 : Data loaded to Database as a table, Executing queries
+2025-Nov-16-23:08:07 : Preliminaries complete. Initiating ETL process
+2025-Nov-16-23:08:07 : Data extraction complete. Initiating Transformation process
+2025-Nov-16-23:08:07 : Data transformation complete. Initiating Loading process
+2025-Nov-16-23:08:07 : Data saved to CSV file
+2025-Nov-16-23:08:08 : Loaded 30 rows into 'crypto_prices' table at
+2025-Nov-16-23:08:08 : ETL pipeline completed at
+2025-Nov-16-23:08:08 : Loaded 30 rows into 'crypto_prices' table at
+2025-Nov-16-23:08:08 : Data loaded to Database as a table, Executing queries
+2025-Nov-16-23:12:53 : Preliminaries complete. Initiating ETL process
+2025-Nov-16-23:12:53 : Data extraction complete. Initiating Transformation process
+2025-Nov-16-23:12:53 : Data transformation complete. Initiating Loading process
+2025-Nov-16-23:12:53 : Data saved to CSV file
+2025-Nov-16-23:12:54 : Loaded 30 rows into 'crypto_prices' table at
+2025-Nov-16-23:12:54 : ETL pipeline completed at
+2025-Nov-16-23:12:54 : Loaded 30 rows into 'crypto_prices' table at
+2025-Nov-16-23:12:54 : Data loaded to Database as a table, Executing queries

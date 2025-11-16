@@ -1,0 +1,96 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 5s
+      retries: 5
+
+  airflow-webserver:
+    image: apache/airflow:2.8.1
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__WEBSERVER__SECRET_KEY: "my_super_secret_key_12345"
+
+      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/keys/gcp_key.json
+    ports:
+      - "8080:8080"
+    volumes:
+      - /d/ProjectEn/Crypto-Data-ETL-Pipeline/airflow/dags:/opt/airflow/dags
+      - /d/ProjectEn/Crypto-Data-ETL-Pipeline/airflow/keys:/opt/airflow/keys
+    command: webserver
+
+  airflow-scheduler:
+    image: apache/airflow:2.8.1
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__WEBSERVER__SECRET_KEY: "my_super_secret_key_12345"
+
+      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/keys/gcp_key.json
+    volumes:
+      - /d/ProjectEn/Crypto-Data-ETL-Pipeline/airflow/dags:/opt/airflow/dags
+      - /d/ProjectEn/Crypto-Data-ETL-Pipeline/airflow/keys:/opt/airflow/keys
+    command: scheduler
+
+  airflow-triggerer:
+    image: apache/airflow:2.8.1
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__WEBSERVER__SECRET_KEY: "my_super_secret_key_12345"
+
+      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/keys/gcp_key.json
+    volumes:
+      - /d/ProjectEn/Crypto-Data-ETL-Pipeline/airflow/dags:/opt/airflow/dags
+      - /d/ProjectEn/Crypto-Data-ETL-Pipeline/airflow/keys:/opt/airflow/keys
+    command: triggerer
+
+  airflow-init:
+    image: apache/airflow:2.8.1
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
+      GOOGLE_APPLICATION_CREDENTIALS: /opt/airflow/keys/gcp_key.json
+      AIRFLOW__WEBSERVER__SECRET_KEY: "my_super_secret_key_12345"
+    volumes:
+      - /d/ProjectEn/Crypto-Data-ETL-Pipeline/airflow/dags:/opt/airflow/dags
+      - /d/ProjectEn/Crypto-Data-ETL-Pipeline/airflow/keys:/opt/airflow/keys
+    entrypoint: >
+      bash -c "
+      airflow db migrate &&
+      airflow users create \
+      --username admin \
+      --password admin \
+      --firstname Viet \
+      --lastname To \
+      --role Admin \
+      --email admin@example.com
+      "
+
+volumes:
+  postgres-db-volume:
