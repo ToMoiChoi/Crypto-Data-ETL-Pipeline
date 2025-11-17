@@ -200,3 +200,9 @@
 2025-Nov-16-23:12:54 : ETL pipeline completed at
 2025-Nov-16-23:12:54 : Loaded 30 rows into 'crypto_prices' table at
 2025-Nov-16-23:12:54 : Data loaded to Database as a table, Executing queries
+2025-Nov-17-07:49:45 : Preliminaries complete. Initiating ETL process
+2025-Nov-17-07:49:46 : Data extraction complete. Initiating Transformation process
+2025-Nov-17-07:49:46 : Data transformation complete. Initiating Loading process
+2025-Nov-17-07:49:46 : Data saved to CSV file
+2025-Nov-17-07:49:46 : Loaded 30 rows into 'crypto_prices' table at
+2025-Nov-17-07:49:46 : ETL pipeline completed at

@@ -63,7 +63,6 @@ df.to_sql('CryptoData', con=sql_connection, if_exists='replace', index=False)
 
     crypto_etl_pipeline.ipynb     # Notebook version of the ETL pipeline
     crypto_data.csv               # Cleaned crypto dataset
-    CryptoData.db                 # SQLite database
     README.md
 
     airflow/
@@ -95,7 +94,7 @@ Airflow provides:
 The DAG orchestrates all 3 tasks:
 
 ``` python
-extract_task >> transform_task >> load_task
+  extract >> convert >> transform >> load_csv >> load_bq
 ```
 
 ## 👤 Author
